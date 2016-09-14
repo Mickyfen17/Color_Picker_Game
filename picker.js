@@ -97,7 +97,8 @@ btnEasy.addEventListener("click", function() {
 	setGame();
 });
 
-
+//Loads game as soon as browser is opened or refreshed
+window.onload = setGame();
 
 
 
