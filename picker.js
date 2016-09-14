@@ -49,9 +49,10 @@ function setGame() {
 	console.log(randomNumber);
 }
 
-function allBtnsColored(colorsList, correctColor) {
-	for(var i = 0; i < colorsList.length; i++) {
-		colorList[i].style.backgroundColor = correctColor;
+//function to turn all squares to same color as correctColor
+function allBtnsColored(correctColor) {
+	for(var i = 0; i < colors.length; i++) {
+		colors[i].style.backgroundColor = correctColor;
 	}
 }
 
@@ -64,12 +65,7 @@ for(var i = 0; i < colors.length; i++) {
 				gameOutcome.style.color = "#5cb85c";
 				newGameBtn.textContent = "PLAY AGAIN?";
 				titleBackground.style.backgroundColor = colorGuessDisplay.textContent;
-				colors[0].style.backgroundColor = colorGuessDisplay.textContent;
-				colors[1].style.backgroundColor = colorGuessDisplay.textContent;
-				colors[2].style.backgroundColor = colorGuessDisplay.textContent;
-				colors[3].style.backgroundColor = colorGuessDisplay.textContent;
-				colors[4].style.backgroundColor = colorGuessDisplay.textContent;
-				colors[5].style.backgroundColor = colorGuessDisplay.textContent;
+				allBtnsColored(colorGuessDisplay.textContent);
 				gameOver = true;
 			} else {
 				gameOutcome.textContent = "Try Again";
