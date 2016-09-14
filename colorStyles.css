@@ -1,0 +1,70 @@
+/** {
+	border: 1px solid red;
+}*/
+
+body {
+	background-color: #303638;
+	font-family: Boogaloo, cursive;
+	font-size: 1.6em;
+}
+
+.title {
+	text-align: center;
+	background-color: #089FD1;
+	color: white;
+	transition: background-color 0.75s ease-in-out;
+	text-shadow: -2px 2px 4px black;
+}
+
+h1 {
+	font-size: 4em;
+	margin: 0;
+}
+
+h3 {
+	font-size: 2em;
+	margin: 0;
+	padding-top: 10px
+}
+
+.options {
+	text-align: center;
+	background-color: white;
+	color: #089FD1;
+}
+
+#outCome {
+	color: black;
+}
+
+#btnEasy, #btnHard {
+	padding: 0 5px 0 5px;
+}
+
+#btnEasy:hover, #btnHard:hover, #newGame:hover {
+	background-color: #089FD1;
+	color: white;
+	transition: all 0.25s ease-in-out;
+}
+
+.color {
+	/*width: 150px;*/
+	height: 150px;
+	background-color: white;
+	float: none;
+	margin: auto;
+	margin-bottom: 15px;
+	border-radius: 10px;
+	transition: all 0.75s ease-in-out;
+}
+
+#newGame, #outCome {
+	margin-right: 40px;
+	padding: 0 5px 0 5px;
+}
+
+.bottomHeader {
+	padding-bottom: 8px;
+	padding-top: 0;
+
+}
