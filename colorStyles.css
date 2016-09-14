@@ -45,10 +45,12 @@ h3 {
 	background-color: #089FD1;
 	color: white;
 	transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
 }
 
 .color {
-	/*width: 150px;*/
 	height: 150px;
 	background-color: white;
 	float: none;
@@ -56,6 +58,9 @@ h3 {
 	margin-bottom: 15px;
 	border-radius: 10px;
 	transition: all 0.75s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
 }
 
 #newGame, #outCome {
