@@ -4,11 +4,11 @@ var gameOutcome = document.querySelector("#outCome");
 var btnEasy = document.querySelector("#btnEasy");
 var btnHard = document.querySelector("#btnHard");
 var divEasy = document.querySelector("#divEasy");
-// var divHard = document.querySelector("#divHard");
 var colors = document.getElementsByClassName("color");
-// var displayColors = document.getElementsByClassName("displayColors");
 var titleBackground = document.querySelector(".title");
 var gameOver = false;
+var colorLength;
+var randomNumber;
 
 // Fucntion to choose random RGB value
 function randomColor() {
@@ -20,33 +20,37 @@ function randomColor() {
 	return newColor;
 }
 
-// Function to set the game 
-function setGame() {
-	var correctColor = randomColor();
-	var colorLength;
-	var randomNumber;
-	colorGuessDisplay.textContent = correctColor;
-	
+//Function to determine Easy or Hard mode and color squares with randomColor()
+function gameType() {
 	//Deciding if game is in Easy or Hard mode
 	if(divEasy.style.display === "none") {
 		colorLength = colors.length / 2;
 	} else {
 		colorLength = colors.length;
 	}
-	//Random number to be used when selecting the div for the matching color
+	//Random number to be used when selecting the square for the correct color
 	randomNumber = Math.floor(Math.random() * colorLength);
-	//Loop through divs in color length and set color using the randomColor function
+	//Loop through squares in colorLength and set color using the randomColor()
 	for(var i = 0; i < colorLength; i++) {
 		colors[i].style.backgroundColor = randomColor();
 	}
+}
+
+// Function to set the game 
+function setGame() {
+	//Asigns a color to correctColor
+	var correctColor = randomColor();
+	//Displays correct color to HTML page
+	colorGuessDisplay.textContent = correctColor;
+	//Run gameType function
+	gameType();
+	//Sets correct color to one square via randonNumber from gameType()
 	colors[randomNumber].style.backgroundColor = correctColor;
 	gameOutcome.textContent = "Take a Guess";
 	gameOutcome.style.color = "black";
 	newGameBtn.textContent = "NEW COLORS";
 	titleBackground.style.backgroundColor = "#089FD1";
 	gameOver = false;
-	console.log(correctColor);
-	console.log(randomNumber);
 }
 
 //function to turn all squares to same color as correctColor
